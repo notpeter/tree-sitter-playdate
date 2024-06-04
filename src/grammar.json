@@ -118,7 +118,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -135,7 +135,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -152,7 +152,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -169,7 +169,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -186,7 +186,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_reverse_dns"
+          "name": "reverse_dns"
         }
       ]
     },
@@ -203,7 +203,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_integer"
+          "name": "integer"
         }
       ]
     },
@@ -220,7 +220,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -237,7 +237,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -254,7 +254,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -271,7 +271,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_string"
+          "name": "string"
         }
       ]
     },
@@ -287,29 +287,20 @@
           "value": "="
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_string"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_integer"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "string"
         }
       ]
     },
-    "_string": {
+    "string": {
       "type": "PATTERN",
       "value": "[^\\r\\n]+"
     },
-    "_integer": {
+    "integer": {
       "type": "PATTERN",
       "value": "[0-9]+"
     },
-    "_reverse_dns": {
+    "reverse_dns": {
       "type": "PATTERN",
       "value": "[-a-zA-Z0-9]+(\\.[-a-zA-Z0-9]+)+"
     }
