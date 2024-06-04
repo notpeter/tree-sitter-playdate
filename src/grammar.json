@@ -1,5 +1,5 @@
 {
-  "name": "playdate",
+  "name": "pdxinfo",
   "rules": {
     "source_file": {
       "type": "REPEAT",

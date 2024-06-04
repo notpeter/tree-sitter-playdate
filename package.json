@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-playdate",
+  "name": "tree-sitter-pdxinfo",
   "version": "1.0.0",
   "main": "index.js",
   "types": "bindings/node",
@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notpeter/tree-sitter-pdxinfo.git"
   },
   "keywords": [],
   "files": [
@@ -19,7 +23,7 @@
   ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Playdate Pdxinfo Tree-sitter grammar",
   "dependencies": {
     "node-addon-api": "^7.1.0",
     "node-gyp-build": "^4.8.0"
@@ -38,8 +42,9 @@
   },
   "tree-sitter": [
     {
-      "scope": "source.playdate",
-      "injection-regex": "^playdate$"
+      "scope": "source.pdxinfo",
+      "file-types": ["pdxinfo"],
+      "injection-regex": "^pdxinfo$"
     }
   ]
 }

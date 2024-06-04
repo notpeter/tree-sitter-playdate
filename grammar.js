@@ -5,7 +5,7 @@
 // - Try and break pdc a bit
 
 module.exports = grammar({
-  name: "playdate",
+  name: "pdxinfo",
   rules: {
     source_file: ($) => repeat(choice($.definition, $.comment, $._newline)),
     comment: (_) => seq("#", /[^\r\n]*/),
