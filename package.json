@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-pdxinfo",
+  "name": "tree-sitter-playdate-pdxinfo",
   "version": "1.0.0",
   "main": "index.js",
   "types": "bindings/node",
@@ -8,10 +8,7 @@
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/notpeter/tree-sitter-pdxinfo.git"
-  },
+  "repository": "github:notpeter/tree-sitter-playdate-pdxinfo",
   "keywords": [],
   "files": [
     "grammar.js",
