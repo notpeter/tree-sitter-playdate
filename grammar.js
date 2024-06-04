@@ -1,27 +1,46 @@
 module.exports = grammar({
   name: "playdate",
   rules: {
-    source_file: ($) => repeat(choice($.definition, $.comment, $.empty_line)),
-    comment: ($) => token(seq("#", /.*/)),
-    empty_line: ($) => /\s*\n/,
-    definition: ($) => seq(choice($.known, $.unknown)),
-    known: ($) =>
-      choice(
-        seq("name", "", "=", $._string),
-        seq("author", "", "=", $._string),
-        seq("description", "=", $._string),
-        seq("version", "=", $._string),
-        seq("bundleID", "=", $._reverse_dns),
-        seq("buildNumber", "=", $._integer),
-        seq("imagePath", "=", $._string),
-        seq("launchSoundPath", "=", $._string),
-        seq("contentWarning", "=", $._string),
-        seq("contentWarning2", "=", $._string),
+    source_file: ($) => repeat(choice($.definition, $.comment, $._newline)),
+    comment: (_) => seq("#", /[^\r\n]*/),
+    _newline: (_) => /\r?\n/,
+    definition: ($) =>
+      seq(
+        choice(
+          prec(
+            2,
+            choice(
+              $.name,
+              $.author,
+              $.description,
+              $.version,
+              $.bundleID,
+              $.buildNumber,
+              $.imagePath,
+              $.launchSoundPath,
+              $.contentWarning,
+              $.contentWarning2,
+            ),
+          ),
+          prec(1, $.customDefinition),
+        ),
       ),
-    unknown: ($) => seq(/[A-z]+[A-z0-9]*=/, choice($._string, $._integer)),
-    _string: ($) => /[^\r\n]+/,
-    _integer: ($) => /[0-9]+/,
-    _reverse_dns: ($) => /[-a-zA-Z0-9]+(\.[-a-zA-Z0-9]+)+/,
+    // Known definitions (key=value)
+    name: ($) => seq("name", "=", $._string),
+    author: ($) => seq("author", "=", $._string),
+    description: ($) => seq("description", "=", $._string),
+    version: ($) => seq("version", "=", $._string),
+    bundleID: ($) => seq("bundleID", "=", $._reverse_dns),
+    buildNumber: ($) => seq("buildNumber", "=", $._integer),
+    imagePath: ($) => seq("imagePath", "=", $._string),
+    launchSoundPath: ($) => seq("launchSoundPath", "=", $._string),
+    contentWarning: ($) => seq("contentWarning", "=", $._string),
+    contentWarning2: ($) => seq("contentWarning2", "=", $._string),
+    // Custom definitions (key=value)
+    customDefinition: ($) => seq(/[A-z]+[A-z0-9]*/, "=", choice($._string, $._integer)),
+    _string: (_) => /[^\r\n]+/,
+    _integer: (_) => /[0-9]+/,
+    _reverse_dns: (_) => /[-a-zA-Z0-9]+(\.[-a-zA-Z0-9]+)+/,
   },
-  extras: ($) => [],
+  extras: (_) => [],
 });

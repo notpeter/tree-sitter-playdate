@@ -1,5 +1,40 @@
 [
   {
+    "type": "author",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "buildNumber",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "bundleID",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "contentWarning",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "contentWarning2",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "customDefinition",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "definition",
     "named": true,
     "fields": {},
@@ -8,18 +43,69 @@
       "required": true,
       "types": [
         {
-          "type": "known",
+          "type": "author",
           "named": true
         },
         {
-          "type": "unknown",
+          "type": "buildNumber",
+          "named": true
+        },
+        {
+          "type": "bundleID",
+          "named": true
+        },
+        {
+          "type": "contentWarning",
+          "named": true
+        },
+        {
+          "type": "contentWarning2",
+          "named": true
+        },
+        {
+          "type": "customDefinition",
+          "named": true
+        },
+        {
+          "type": "description",
+          "named": true
+        },
+        {
+          "type": "imagePath",
+          "named": true
+        },
+        {
+          "type": "launchSoundPath",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "version",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "known",
+    "type": "description",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "imagePath",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "launchSoundPath",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "name",
     "named": true,
     "fields": {}
   },
@@ -38,21 +124,17 @@
         {
           "type": "definition",
           "named": true
-        },
-        {
-          "type": "empty_line",
-          "named": true
         }
       ]
     }
   },
   {
-    "type": "unknown",
+    "type": "version",
     "named": true,
     "fields": {}
   },
   {
-    "type": "",
+    "type": "#",
     "named": false
   },
   {
@@ -72,10 +154,6 @@
     "named": false
   },
   {
-    "type": "comment",
-    "named": true
-  },
-  {
     "type": "contentWarning",
     "named": false
   },
@@ -86,10 +164,6 @@
   {
     "type": "description",
     "named": false
-  },
-  {
-    "type": "empty_line",
-    "named": true
   },
   {
     "type": "imagePath",

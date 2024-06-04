@@ -1,0 +1,18 @@
+==================
+Pdxinfo (minimal)
+==================
+name=b360
+author=Panic Inc.
+bundleID=com.panic.b360
+buildNumber=123
+
+---
+(source_file
+    (definition
+    (name))
+    (definition
+    (author))
+    (definition
+    (bundleID))
+    (definition
+    (buildNumber)))

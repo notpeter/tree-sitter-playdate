@@ -1,0 +1,32 @@
+==================
+Pdxinfo (messy)
+==================
+
+# Leading newline...oooo.... and comments.
+# Documentation https://sdk.play.date/inside-playdate/#pdxinfo
+name=A New with Spaces.
+
+author=A Name With Pünc†uå†iönš.
+#
+# customKey=customValue
+bundleID=com.panic.playdate-newgame
+buildNumber=123
+
+
+customKey=customValue
+---
+(source_file
+    (comment)
+    (comment)
+    (definition
+    (name))
+    (definition
+    (author))
+    (comment)
+    (comment)
+    (definition
+    (bundleID))
+    (definition
+    (buildNumber))
+    (definition
+    (customDefinition)))
