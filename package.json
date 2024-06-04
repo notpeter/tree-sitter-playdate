@@ -18,8 +18,9 @@
     "queries/*",
     "src/**"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Peter Tripp <petertripp@gmail.com> (https://github.com/notpeter)",
+  "funding": "https://github.com/sponsors/notpeter/",
+  "license": "MIT",
   "description": "Playdate Pdxinfo Tree-sitter grammar",
   "dependencies": {
     "node-addon-api": "^7.1.0",

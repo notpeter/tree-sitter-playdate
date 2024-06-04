@@ -1,5 +1,8 @@
 * text eol=lf
 
+src/scanner.c -linguist-detectable
+queries/highlights.scm -linguist-detectable
+
 src/*.json linguist-generated
 src/parser.c linguist-generated
 src/tree_sitter/* linguist-generated
