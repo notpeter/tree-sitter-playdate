@@ -1,11 +1,110 @@
 [
   {
-    "type": "source_file",
+    "type": "definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "known",
+          "named": true
+        },
+        {
+          "type": "unknown",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "known",
     "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "definition",
+          "named": true
+        },
+        {
+          "type": "empty_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unknown",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "author",
+    "named": false
+  },
+  {
+    "type": "buildNumber",
+    "named": false
+  },
+  {
+    "type": "bundleID",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "contentWarning",
+    "named": false
+  },
+  {
+    "type": "contentWarning2",
+    "named": false
+  },
+  {
+    "type": "description",
+    "named": false
+  },
+  {
+    "type": "empty_line",
+    "named": true
+  },
+  {
+    "type": "imagePath",
+    "named": false
+  },
+  {
+    "type": "launchSoundPath",
+    "named": false
+  },
+  {
+    "type": "name",
+    "named": false
+  },
+  {
+    "type": "version",
     "named": false
   }
 ]
