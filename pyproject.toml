@@ -7,12 +7,13 @@ name = "tree-sitter-pdxinfo"
 description = "Pdxinfo grammar for tree-sitter"
 version = "0.0.1"
 keywords = ["incremental", "parsing", "tree-sitter", "pdxinfo"]
+authors = [{ name = "Peter Tripp", email = "petertripp@gmail.com" }]
 classifiers = [
-  "Intended Audience :: Developers",
-  "License :: OSI Approved :: MIT License",
-  "Topic :: Software Development :: Compilers",
-  "Topic :: Text Processing :: Linguistic",
-  "Typing :: Typed"
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
 ]
 requires-python = ">=3.8"
 license.text = "MIT"
