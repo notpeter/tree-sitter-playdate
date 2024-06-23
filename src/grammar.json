@@ -1,5 +1,5 @@
 {
-  "name": "playdate",
+  "name": "pdxinfo",
   "rules": {
     "pdxinfo": {
       "type": "REPEAT",
@@ -91,8 +91,11 @@
           "value": "name"
         },
         {
-          "type": "STRING",
-          "value": "="
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "="
+          }
         },
         {
           "type": "SYMBOL",

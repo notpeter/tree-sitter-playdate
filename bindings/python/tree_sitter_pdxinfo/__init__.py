@@ -1,4 +1,4 @@
-"Playdate grammar for tree-sitter"
+"Pdxinfo grammar for tree-sitter"
 
 from ._binding import language
 

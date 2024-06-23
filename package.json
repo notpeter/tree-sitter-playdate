@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-playdate",
+  "name": "tree-sitter-pdxinfo",
   "version": "1.0.0",
   "main": "bindings/node",
   "types": "bindings/node",
@@ -12,7 +12,7 @@
     "parse": "tree-sitter parse",
     "test": "tree-sitter test"
   },
-  "repository": "github:notpeter/tree-sitter-playdate",
+  "repository": "github:notpeter/tree-sitter-pdxinfo",
   "keywords": [],
   "files": [
     "grammar.js",

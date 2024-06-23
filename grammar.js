@@ -1,7 +1,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 
 module.exports = grammar({
-  name: "playdate",
+  name: "pdxinfo",
   rules: {
     pdxinfo: ($) => repeat(choice($.definition, $.comment, $._newline)),
     comment: (_) => seq("#", /[^\r\n]*/),
@@ -19,8 +19,8 @@ module.exports = grammar({
         $.contentWarning,
         $.contentWarning2,
       ),
-    // Known definitions (key=value)
-    name: ($) => seq("name", "=", $.string),
+    // pdxinfo definitions (key=value)
+    name: ($) => seq("name", token.immediate("="), $.string),
     author: ($) => seq("author", "=", $.string),
     description: ($) => seq("description", "=", $.string),
     version: ($) => seq("version", "=", $.string),
@@ -30,10 +30,10 @@ module.exports = grammar({
     launchSoundPath: ($) => seq("launchSoundPath", "=", $.string),
     contentWarning: ($) => seq("contentWarning", "=", $.string),
     contentWarning2: ($) => seq("contentWarning2", "=", $.string),
-    // Custom definitions (key=value)
+    // regexes
     string: (_) => /[^\r\n]+/,
     integer: (_) => /[0-9]+/,
     reverse_dns: (_) => /[-a-zA-Z0-9]+(\.[-a-zA-Z0-9]+)+/,
   },
-  extras: (_) => [],
+  extras: ($) => [],
 });
