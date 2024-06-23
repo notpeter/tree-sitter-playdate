@@ -1,7 +1,7 @@
 {
   "name": "playdate",
   "rules": {
-    "source_file": {
+    "pdxinfo": {
       "type": "REPEAT",
       "content": {
         "type": "CHOICE",
@@ -39,69 +39,47 @@
       "value": "\\r?\\n"
     },
     "definition": {
-      "type": "SEQ",
+      "type": "CHOICE",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PREC",
-              "value": 2,
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "name"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "author"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "description"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "version"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "bundleID"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "buildNumber"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "imagePath"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "launchSoundPath"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "contentWarning"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "contentWarning2"
-                  }
-                ]
-              }
-            },
-            {
-              "type": "PREC",
-              "value": 1,
-              "content": {
-                "type": "SYMBOL",
-                "name": "customDefinition"
-              }
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "author"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "description"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "version"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bundleID"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "buildNumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "imagePath"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "launchSoundPath"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "contentWarning"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "contentWarning2"
         }
       ]
     },
@@ -264,23 +242,6 @@
         {
           "type": "STRING",
           "value": "contentWarning2"
-        },
-        {
-          "type": "STRING",
-          "value": "="
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        }
-      ]
-    },
-    "customDefinition": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "PATTERN",
-          "value": "[A-z]+[A-z0-9]*"
         },
         {
           "type": "STRING",
