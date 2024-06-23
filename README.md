@@ -1,4 +1,4 @@
-# tree-sitter-playdate-pdxinfo
+# tree-sitter-playdate
 
 PlaydateSDK `pdxinfo` tree-sitter grammar.
 

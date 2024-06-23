@@ -1,15 +1,15 @@
-package tree_sitter_pdxinfo_test
+package tree_sitter_playdate_test
 
 import (
 	"testing"
 
 	tree_sitter "github.com/smacker/go-tree-sitter"
-	"github.com/notpeter/tree-sitter-playdate-pdxinfo"
+	"github.com/notpeter/tree-sitter-playdate"
 )
 
 func TestCanLoadGrammar(t *testing.T) {
-	language := tree_sitter.NewLanguage(tree_sitter_pdxinfo.Language())
+	language := tree_sitter.NewLanguage(tree_sitter_playdate.Language())
 	if language == nil {
-		t.Errorf("Error loading Playdate Pdxinfo grammar")
+		t.Errorf("Error loading Playdate grammar")
 	}
 }
